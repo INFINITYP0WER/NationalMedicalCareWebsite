@@ -26,36 +26,3 @@ footer {
     background: #f8f9fa;
     padding: 10px;
 }
-table {
-    width: 80%;
-    margin: 20px auto;
-    border-collapse: collapse;
-}
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-th {
-    background-color: #007bff;
-    color: white;
-}
-.insurance-list {
-    width: 80%;
-    margin: 20px auto;
-    text-align: left;
-}
-.insurance-list h2 {
-    text-align: center;
-    color: #007bff;
-}
-.insurance-list ul {
-    list-style-type: none;
-    padding: 0;
-}
-.insurance-list ul li {
-    background: #f1f1f1;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 5px;
-}
