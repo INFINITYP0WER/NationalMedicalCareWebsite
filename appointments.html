@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Book an Appointment</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="doctors.html">Doctors</a></li>
+                <li><a href="insurance.html">Insurance</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form id="appointment-form">
+            <label for="doctor">Select Doctor:</label>
+            <select id="doctor" name="doctor">
+                <option value="Ahmed Atef Ibrahim Elbez">Ahmed Atef Ibrahim Elbez</option>
+                <option value="Ahmed Hossameldin">Ahmed Hossameldin</option>
+                <option value="Bsam Abdalrzak Lbadh">Bsam Abdalrzak Lbadh</option>
+                <option value="Hashim Ali Asif">Hashim Ali Asif</option>
+                <option value="Jamal Mohamed Haj Hussen">Jamal Mohamed Haj Hussen</option>
+            </select>
+            
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date">
+            
+            <label for="time">Select Time:</label>
+            <input type="time" id="time" name="time">
+            
+            <button type="submit">Book Appointment</button>
+        </form>
+        <p id="response"></p>
+    </main>
+    <footer>
+        <p>&copy; 2025 National Medical Care Complex</p>
+    </footer>
+
+    <script>
+        document.getElementById("appointment-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const doctor = document.getElementById("doctor").value;
+            const date = document.getElementById("date").value;
+            const time = document.getElementById("time").value;
+            const responseMessage = `Your appointment with Dr. ${doctor} is confirmed for ${date} at ${time}.`;
+            document.getElementById("response").textContent = responseMessage;
+        });
+    </script>
+</body>
+</html>
