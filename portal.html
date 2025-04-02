@@ -3,19 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patient Portal</title>
+    <meta name="description" content="List of insurance providers accepted at National Medical Care Complex.">
+    <title>Insurance Providers | National Medical Care Complex</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        function filterInsurance() {
+            let input = document.getElementById("insuranceSearch").value.toLowerCase();
+            let items = document.querySelectorAll(".insurance-list ul li");
+            
+            items.forEach(item => {
+                if (item.textContent.toLowerCase().includes(input)) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>Patient Portal</h1>
+        <h1>Accepted Insurance Companies</h1>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="doctors.html">Doctors</a></li>
+                <li><a href="appointments.html">Book Appointment</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <form action="login.php" method="post">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required><br><br>
-            <button type="submit">Login</button>
-        </form>
+        <div class="insurance-list">
+            <h2>Our Insurance Partners</h2>
+            <input type="text" id="insuranceSearch" onkeyup="filterInsurance()" placeholder="Search insurance..." class="search-box">
+            <ul>
+                <li>Bupa Arabia Insurance</li>
+                <li>Tawuniya Insurance</li>
+                <li>AlRajhi Takaful Insurance</li>
+                <li>MedGulf Insurance</li>
+                <li>Gulf Union Insurance</li>
+                <li>Gulf Insurance Group (GIG)</li>
+                <li>Saudi Arabian Cooperative Insurance Company (SAICO)</li>
+                <li>Malath Cooperative Insurance & Reinsurance Company</li>
+                <li>Saudi Enaya Insurance</li>
+                <li>WALA'A Insurance</li>
+                <li>Arabia Insurance</li>
+                <li>Salama Insurance</li>
+                <li>AMANA Insurance</li>
+                <li>Allianz Saudi Fransi Insurance</li>
+                <li>AlJazeera Takaful Insurance</li>
+                <li>Arabian Shield Insurance</li>
+                <li>Trade Union Insurance</li>
+                <li>AlSagr Insurance</li>
+                <li>Allied Insurance (ACIG)</li>
+                <li>Buruj Insurance</li>
+                <li>United Assurance Company (UCA)</li>
+            </ul>
+        </div>
     </main>
+    <footer>
+        <p>&copy; 2025 National Medical Care Complex | <a href="privacy.html">Privacy Policy</a> | <a href="contact.html">Contact Us</a></p>
+    </footer>
 </body>
 </html>
