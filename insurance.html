@@ -6,6 +6,20 @@
     <meta name="description" content="List of insurance providers accepted at National Medical Care Complex.">
     <title>Insurance Providers | National Medical Care Complex</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        function filterInsurance() {
+            let input = document.getElementById("insuranceSearch").value.toLowerCase();
+            let items = document.querySelectorAll(".insurance-list ul li");
+            
+            items.forEach(item => {
+                if (item.textContent.toLowerCase().includes(input)) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -22,6 +36,7 @@
     <main>
         <div class="insurance-list">
             <h2>Our Insurance Partners</h2>
+            <input type="text" id="insuranceSearch" onkeyup="filterInsurance()" placeholder="Search insurance..." class="search-box">
             <ul>
                 <li>Bupa Arabia Insurance</li>
                 <li>Tawuniya Insurance</li>
