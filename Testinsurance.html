@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="List of insurance providers accepted at National Medical Care Complex.">
+    <title>Insurance Providers | National Medical Care Complex</title>
+    
+    <!-- jQuery (Required for Slick Slider) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+    
+    <!-- Slick Theme CSS (Optional) -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+    
+    <!-- Slick Slider JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+    
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #007bff;
+            color: white;
+            padding: 15px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 20px;
+            background: #f8f9fa;
+            padding: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* Insurance Slider */
+        .insurance-slider {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .insurance-item {
+            text-align: center;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .insurance-item img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .insurance-item h3 {
+            color: #007bff;
+            margin: 5px 0;
+        }
+        .insurance-item a {
+            display: block;
+            margin-top: 5px;
+            padding: 5px 10px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .insurance-item a:hover {
+            background: #0056b3;
+        }
+
+        /* Slick Slider Arrows */
+        .slick-prev, .slick-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 24px;
+            border-radius: 50%;
+            transition: background 0.3s;
+        }
+        .slick-prev {
+            left: -40px;
+        }
+        .slick-next {
+            right: -40px;
+        }
+        .slick-prev:hover, .slick-next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Responsive Fix for Smaller Screens */
+        @media (max-width: 768px) {
+            .slick-prev {
+                left: -20px;
+            }
+            .slick-next {
+                right: -20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Accepted Insurance Companies</h1>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="doctors/doctors.html">Doctors</a></li>
+                <li><a href="appointments.html">Appointments</a></li>
+                <li><a href="portal.html">Patient Portal</a></li>
+                <li><a href="eligibility_form.html">Insurance Eligibility</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="insurance-slider">
+            <div class="insurance-item">
+                <img src="insurance1.png" alt="Bupa Arabia">
+                <h3>Bupa Arabia</h3>
+                <a href="eligibility_form.html">Check Eligibility</a>
+            </div>
+            <div class="insurance-item">
+                <img src="insurance2.png" alt="Tawuniya">
+                <h3>Tawuniya</h3>
+                <a href="eligibility_form.html">Check Eligibility</a>
+            </div>
+            <div class="insurance-item">
+                <img src="insurance3.png" alt="MedGulf">
+                <h3>MedGulf</h3>
+                <a href="eligibility_form.html">Check Eligibility</a>
+            </div>
+            <div class="insurance-item">
+                <img src="insurance4.png" alt="GIG Insurance">
+                <h3>GIG Insurance</h3>
+                <a href="eligibility_form.html">Check Eligibility</a>
+            </div>
+            <div class="insurance-item">
+                <img src="insurance5.png" alt="Saudi Enaya">
+                <h3>Saudi Enaya</h3>
+                <a href="eligibility_form.html">Check Eligibility</a>
+            </div>
+            <div class="insurance-item">
+                <img src="insurance6.png" alt="Malath Insurance">
+                <h3>Malath Insurance</h3>
+                <a href="eligibility_form.html">Check Eligibility</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 National Medical Care Complex | <a href="privacy.html">Privacy Policy</a> | <a href="contact.html">Contact Us</a></p>
+    </footer>
+
+    <!-- Initialize Slick Slider -->
+    <script>
+        $(document).ready(function(){
+            $('.insurance-slider').slick({
+                slidesToShow: 3, /* Number of visible items */
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: false,
+                infinite: true,
+                speed: 500,
+                arrows: true,  /* Enable left & right arrows */
+                prevArrow: '<button type="button" class="slick-prev">&#10094;</button>',
+                nextArrow: '<button type="button" class="slick-next">&#10095;</button>',
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+</body>
+</html>
